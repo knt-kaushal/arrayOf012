@@ -1,0 +1,32 @@
+//--------------Arrays of 012-----------
+
+arr = [0,1,0,0,1,2,1,1,2];
+console.log(`Given Array : ${arr}`);
+i=0 , countOf0 = 0 , countOf1 = 0 ;
+for( i=0 ; i<arr.length ; i++) 
+{
+    if ( arr[i] == 0)
+    {
+        countOf0++;
+    }
+    else if( arr[i] ==1)
+    {
+        countOf1++;
+    }
+}
+console.log(`Zeros = ${countOf0} Ones = ${countOf1}`);
+
+for( i=0 ; i<countOf0 ; i++)
+{
+    arr[i] = 0;
+}
+while ( i < (countOf0 + countOf1))
+{
+    arr[i] = 1;
+}
+while( i < arr.length)
+{
+    arr[i] = 2;
+}
+
+console.log(`Sorted Array : ${arr}`);
